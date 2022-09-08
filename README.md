@@ -1,5 +1,5 @@
 # tpl-2022
-Source Code &amp; Homework for lessons at Tallinn French School's 2022 programming class
+Source Code &amp; Homework for lessons at Tallinn French School's 2022 programming class.
 
 ## You're in the right place!
 Find the homework and lecture notes from the subfolders:
