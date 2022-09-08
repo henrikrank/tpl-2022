@@ -8,6 +8,7 @@ Find the homework and lecture notes from the subfolders:
 # Extra: Don't stop here!
 ## Practise everywhere on the go
 If you want to become a really good developer, you need to put in the effort. That means studying various topics, and practising-practising-practising. You can only get good at anything in life if you continuously practise. Be hands on and get to work!
+> When I was learing to code, I downloaded apps to run code on my phone, so I could do it anywhere. You can also use the [W3Schools TryIt Editor](https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello) editor on the go!
 
 ## Best way to become a good developer
 1. Find a project you really want to make (personal website, calorie calculator, friend's birthday card etc) and with this goal in mind, start googling how to build it.
