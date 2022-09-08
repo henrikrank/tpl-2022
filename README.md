@@ -46,4 +46,4 @@ Below is a list of programming video courses and books that really helped me and
 * Countdown to graduation
 * Calorie counter website
 * Cookie clicker game
-* Personal Website showcasing your hobbies
+* Personal website showcasing your hobbies
