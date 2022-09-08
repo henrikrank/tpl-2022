@@ -3,7 +3,7 @@ Source Code &amp; Homework for lessons at Tallinn French School's 2022 programmi
 
 ## You're in the right place!
 Find the homework and lecture notes from the subfolders:
-> Example: If you're looking for homework for lesson 1, find and open the **README.md** in the lesson-1/homework subfolder.
+> If you're looking for homework for lesson 1, find and open the **README.md** in the lesson-1/homework subfolder.
 
 # Extra: Don't stop here!
 ## Practise everywhere on the go
