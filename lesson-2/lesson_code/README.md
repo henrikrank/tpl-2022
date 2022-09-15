@@ -20,7 +20,7 @@ Making boxes and layouts.
 | Highlight a word and press CTRL + D | Add a new cursor to next occurrence of word |
 | CTRL + Shift + P | Open command dialog |
 
-## Helpful Shortcuts to set up in VSCode
+## Extra: Helpful Shortcuts to set up in VSCode
 * Create new file
 * Create new folder
 * Append cursor to selection
@@ -32,13 +32,13 @@ The [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduct
 * [CSS Syntax and Guide](https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Getting_started)
 * [HTML & CSS Cheat Sheet](https://acchou.github.io/html-css-cheat-sheet/html-css-cheat-sheet.html)
 
-## Task for learning CSS Flexbox and working with `<div>`'s
+## 1. Task for learning CSS Flexbox and working with `<div>`'s
 * Make the Italian flag using CSS Flexbox. [In-depth Flexbox Reference](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 * Make the flag the whole width of the screen. (hint - width: 33.33%; or would you like to use `flex: 1;` instead?)
 * In the "white" portion of the flag, center a picture of Pizza. Make sure it doesn't skew the flag's proportions
 * In the bottom of the Red portion, add your name. Make the text **bold** and color it white. Also, don't use Times New Roman.
 
-## Start with your homework project
+## 2. Start with your homework project
 * Have a look [here](https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Styling_a_biography_page) for basic inpiration. You can also refer to the lesson-1/lesson_code project.
 * Create a one-page website about a subject you like. It can be a personal profile page, a page about your interests, etc.
 * Make sure to use `<div>` and CSS Flexbox to structure the layout.
