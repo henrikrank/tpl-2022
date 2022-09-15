@@ -1,16 +1,12 @@
 # Today's lesson
 Making boxes and layouts.
 
-## Learn these Shortcuts while working with your PC
-* ALT + Tab (keep pressing ALT, then quickly press Tab and relase the key, then release ALT)
-    * You will switch between the 2 most recently used applications - like VSCode and your Browser
-* Windows + Tab (same logic as ALT + Tab)
-    * Scatter windows to a birds-eye view. Use the cursor to select the program you want to use
-
 ## Shortcuts for VSCode
 
 | Shortcut | Description |
 | ---------|-------------|
+| ALT + Tab | (keep pressing ALT, then quickly press Tab and relase the key, then release ALT) You will switch between the 2 most recently used applications - like VSCode and your Browser. |
+| Windows + Tab | Scatter windows to a birds-eye view. Use the cursor to select the program you want to use. |
 | CTRL + C and CTRL + V | Copy & Paste. Learn it by heart and only copy files like this from now on. <br> When you have higlighted a word, it will copy only the word, but qhen you just have your cursor on the line, it will copy the whole line |
 | CTRL + F          | Find text in file |
 | CTRL + <- or ->   | Move cursor one word at a time |
