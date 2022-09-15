@@ -1,7 +1,7 @@
 # Today's lesson
 Making boxes and layouts.
 
-## Shortcuts for VSCode
+## Shortcuts to know by heart
 
 | Shortcut | Description |
 | ---------|-------------|
