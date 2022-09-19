@@ -10,7 +10,7 @@ Mainly, I want you to play around with different **HTML and CSS** elements. Try 
 
 You can download the Project as a zip file from the main page. Unzip it and open the index.html file in the lessong-2/jimi-hendrix folder.
 <p align="center">
-  <img alt="VS Code in action" src="https://user-images.githubusercontent.com/35271042/118224532-3842c400-b438-11eb-923d-a5f66fa6785a.png">
+  <img alt="VS Code in action" src="https://github.com/henrikrank/tpl-2022/blob/main/lesson-2/homework/readme_assets/how-to-download-github-projects.png?raw=true">
 </p>
 
 
