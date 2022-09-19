@@ -8,6 +8,12 @@ Play around with divs and putting text and image content into different "boxes" 
 If you want inspiration, use the code in [lesson-2/jimi-hendrix](https://github.com/henrikrank/tpl-2022/tree/main/lesson-2/homework/jimi-hendrix) as a boilerplate. It's okay to copy some code from over there, or maybe just a couple of elements. 
 Mainly, I want you to play around with different **HTML and CSS** elements. Try out lists, links, buttons, whatever we have done in the previous lessons. Put divs in divs, go crazy. It doesn't have to be anything super fancy, but the cooler it looks, the better the **wow-effect**.
 
+You can download the Project as a zip file from the main page. Unzip it and open the index.html file in the lessong-2/jimi-hendrix folder.
+<p align="center">
+  <img alt="VS Code in action" src="https://user-images.githubusercontent.com/35271042/118224532-3842c400-b438-11eb-923d-a5f66fa6785a.png">
+</p>
+
+
 You can refer to the Jimi Hendrix project or the Tea project for inspiration (but the Tea one is a bit boring, though it has nice buttons and stuff). The website I made about Jimi Hendrix is a showcase of different types of stuff you can do with `<div>`'s and can give some inspiration.
 
 > If you want to use Google Fonts (because Times New Roman is boring), check out [How to use Google Fonts](https://www.youtube.com/watch?v=Z3JR6mEWEEo&ab_channel=DevSprout). I recommend Montserrat!
