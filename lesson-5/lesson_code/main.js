@@ -28,3 +28,16 @@ function getPlacesAPersonCanGoTo(name, age) {
         alert(name + ' can\'t go to the bar!');
     }
 }
+
+function arvutaKeskmineHinne() {
+    var hinded = prompt('Sisesta hinded');
+    var hinneteSumma = 0;
+    var paljuHindeidOn = hinded.length;
+
+    for (i = 0; i < paljuHindeidOn; i++) {
+        hinneteSumma = hinneteSumma + parseInt(hinded[i]);
+    }
+
+    var keskmineHinne = hinneteSumma / paljuHindeidOn;
+    alert('Keskmine hinne on ' + keskmineHinne);
+}
