@@ -3,9 +3,13 @@ function täisnurkseKolmnurgaLahendamine(a, b) {
         a = prompt('Sisesta a');
     }
 
+    a = parseFloat(a);
+
     if (!b) {
         b = prompt('Sisesta b');
     }
+
+    b = parseFloat(b);
 
     var c = Math.sqrt(a * a + b * b);
     var S = a * b / 2;
