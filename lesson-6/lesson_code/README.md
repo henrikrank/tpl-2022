@@ -66,7 +66,6 @@ The program should then print the results to the console.
 
 
 # String methods
-* Cheat sheet:
 ```javascript
 var myName = 'Henrik';
 document.write('HELLO, ' + myName.toUpperCase() + '!');
