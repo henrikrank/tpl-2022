@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+}
+
+#table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Vaikimisi ei ole enamasti ühelgi elemendil kõrgust, seega teeme laua kogu ekraani suuruseks */
+    min-height: 100vh;
+
+    /* Taustapilt */
+    background-image: url('images/table.jpeg');
+    background-position: center;
+    background-size: cover;
+
+    /* Position relative-absolute suhe. Parent on relative, child absolute. */
+    position: relative;
+}
+
+#table-cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/table-cover.jpg');
+    background-repeat: repeat;
+    /**
+     * @question Mis juhtub siis, kui muuta seda väärtust näiteks 300px peale? Miks?
+     */
+    background-size: 1000px;
+}
+
+.board {
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    border: 10px solid #000;
+    position: relative
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    height: 12.5%;
+    flex: 1;
+}
+
+.tile {
+    width: 12.5%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.green {
+    background-color: #009900;
+}
+
+.white {
+    background-color: #fff;
+}
+
+.black {
+    background-color: #000;
+}
+
+
+/* Checkers 2: Adding pieces to the board */
+.piece {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+}
+
+.beige {
+    background-color: #f0e6c8;
+}
+
+/* Checkers 4: Let's create a dame */
+.dame::before{
+    top: 10%;
+    left: 10%;
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    border: 5px solid gold;
+    box-sizing: border-box;
+}
+
