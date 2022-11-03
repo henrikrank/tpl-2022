@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ÕE presidendi valimine</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="main.js" type="text/javascript"></script>
+</head>
+<body>
+    <div id="site-container">
+        <div id="people">
+            <div data-candidate="obama" class="candidate" style="background-image: url('images/obama.jpg')"></div>
+            <div data-candidate="kanye" class="candidate" style="background-image: url('images/kanye.jpg')"></div>
+            <div data-candidate="puhh" class="candidate" style="background-image: url('images/puhh.jpeg')"></div>
+
+            <div id="confirm-box">
+                <span>Do you want to vote for this candidate?</span>
+                <br>
+                <br>
+                <button class="action-button" id="yes">Yes</button>
+                <button class="action-button" id="no">No</button>
+            </div>
+
+        </div>
+
+        <div id="results-box">
+            <h1>Results:</h1>
+            <div id="candidate-results">
+                <div class="candidate-result">
+                    <span class="candidate-name">Obama</span>
+                    <span data-candidate="obama" class="candidate-votes">0</span>
+                </div>
+                <div class="candidate-result">
+                    <span class="candidate-name">Kanye</span>
+                    <span data-candidate="kanye" class="candidate-votes">0</span>
+                </div>
+                <div class="candidate-result">
+                    <span class="candidate-name">Puhh</span>
+                    <span data-candidate="puhh" class="candidate-votes">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
