@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="game" width="400" height="320"></canvas>
+    <!-- Copied from https://codepen.io/taneltm/pen/WRrZJv -->
+    <script type="text/javascript">
+        (function() {
+
+          // set canvas width and height to window width and height
+          var canvas = document.getElementById('game');
+          var windowWidth = window.innerWidth;
+          var windowHeight = window.innerHeight;
+          canvas.width = windowWidth;
+          canvas.height = windowHeight;
+
+            var Controls, Line, VisualJockey;
+  
+            Line = class Line {
+              constructor() {
+                this.getNextFrame = this.getNextFrame.bind(this);
+                this.canvas = document.createElement('canvas');
+                this.canvas.width = windowWidth;
+                this.canvas.height = windowHeight;
+                this.ctx = this.canvas.getContext('2d');
+                this.x1 = this.getRandomInt(0, windowWidth);
+                this.y1 = this.getRandomInt(0, windowHeight);
+                this.x2 = this.getRandomInt(0, windowWidth);
+                this.y2 = this.getRandomInt(0, windowHeight);
+                this.d1 = [1, -1];
+                this.d2 = [-1, 1];
+                this.hue = this.getRandomInt(0, 360);
+              }
+  
+              getNextFrame() {
+                var ref, ref1, ref2, ref3;
+                if (this.hue === 360) {
+                  this.hue = 0;
+                }
+                if (!((0 < (ref = this.x1) && ref < windowWidth))) {
+                  this.d1[0] *= -1;
+                }
+                if (!((0 < (ref1 = this.y1) && ref1 < windowHeight))) {
+                  this.d1[1] *= -1;
+                }
+                if (!((0 < (ref2 = this.x2) && ref2 < windowWidth))) {
+                  this.d2[0] *= -1;
+                }
+                if (!((0 < (ref3 = this.y2) && ref3 < windowHeight))) {
+                  this.d2[1] *= -1;
+                }
+                this.hue += 1;
+                this.x1 += this.d1[0];
+                this.y1 += this.d1[1];
+                this.x2 += this.d2[0];
+                this.y2 += this.d2[1];
+                this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+                if (typeof this.isRed === 'undefined') {
+                  this.isRed = false;
+                }
+                this.ctx.strokeStyle = this.isRed ? 'red' : `hsl(${this.hue}, 100%, 50%)`;
+                this.ctx.beginPath();
+                this.ctx.moveTo(this.x1, this.y1);
+                this.ctx.lineTo(this.x2, this.y2);
+                this.ctx.closePath();
+                this.ctx.stroke();
+                return this.canvas;
+              }
+  
+              getRandomInt(min, max) {
+                return (Math.floor(Math.random() * (max - min))) + min;
+              }
+            };
+  
+            VisualJockey = class VisualJockey {
+              constructor() {
+                var i;
+                this.main = this.main.bind(this);
+                this.checkInput = this.checkInput.bind(this);
+                this.draw = this.draw.bind(this);
+                this.canvas = document.getElementById('game');
+                this.ctx = this.canvas.getContext('2d');
+                this.controls = new Controls();
+                this.lines = (function() {
+                  var j, results;
+                  results = [];
+                  for (i = j = 0; j < 10; i = ++j) {
+                    results.push(new Line());
+                  }
+                  return results;
+                })();
+                this.line1 = new Line();
+                this.line2 = new Line();
+                this.ctx.fillStyle = 'black';
+                this.ctx.fillRect(0, 0, windowWidth, windowHeight);
+                setInterval(this.main, 16);
+              }
+  
+              main() {
+                if (this.rotation > 360) {
+                  this.rotation = 0;
+                } else {
+                  this.rotation++;
+                }
+                this.checkInput();
+                return this.draw();
+              }
+  
+              checkInput() {
+                if (this.controls.isDown.DOWN) {
+                  this.y++;
+                }
+                if (this.controls.isDown.UP) {
+                  return this.y--;
+                }
+              }
+  
+              draw() {
+                var j, len, line, ref, results;
+                this.ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+                this.ctx.fillRect(0, 0, windowWidth, windowHeight);
+                ref = this.lines;
+                results = [];
+                for (j = 0, len = ref.length; j < len; j++) {
+                  line = ref[j];
+                  results.push(this.ctx.drawImage(line.getNextFrame(), 0, 0));
+                }
+                return results;
+              }
+  
+            };
+  
+            Controls = (function() {
+              class Controls {
+                constructor() {
+                  this.onKeydown = this.onKeydown.bind(this);
+                  this.onKeyup = this.onKeyup.bind(this);
+                  document.onkeydown = this.onKeydown;
+                  document.onkeyup = this.onKeyup;
+                }
+  
+                onKeydown(e) {
+                  switch (e.which) {
+                    case 37:
+                      return this.isDown.LEFT = true;
+                    case 38:
+                      return this.isDown.UP = true;
+                    case 39:
+                      return this.isDown.RIGHT = true;
+                    case 40:
+                      return this.isDown.DOWN = true;
+                  }
+                }
+  
+                onKeyup(e) {
+                  switch (e.which) {
+                    case 37:
+                      return this.isDown.LEFT = false;
+                    case 38:
+                      return this.isDown.UP = false;
+                    case 39:
+                      return this.isDown.RIGHT = false;
+                    case 40:
+                      return this.isDown.DOWN = false;
+                  }
+                }
+  
+              };
+  
+              Controls.prototype.isDown = {
+                UP: false,
+                DOWN: false,
+                LEFT: false,
+                RIGHT: false
+              };
+  
+              return Controls;
+  
+            }).call(this);
+  
+            const VJ = new VisualJockey();
+
+
+
+
+             // Exercises: Change color of all divs to red when Space was clicked. If it's clicked again, change it back to the previous values.
+            function changeColorToRed() {
+                var lines = VJ.lines;
+                for (var i = 0; i < lines.length; i++) {
+                    var line = lines[i];
+                    line.isRed = !line.isRed;
+                }
+            }
+
+            document.addEventListener("keydown", function(event) {
+                if (event.code === "Space") {
+                    changeColorToRed();
+                }
+            });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+          }).call(this);
+    </script>
+</body>
+</html>
