@@ -4,7 +4,7 @@ Get better at JavaScript by solving these exercises. They are very common exerci
 > These are extracts from an online tutor who does great JS exercises. If you want a step-by-step guide to solving them in a fancy way, check out [this link](https://www.youtube.com/watch?v=N65RvNkZFGE&list=PLpc_YvcwbxaSn6jn0VaTcG8A0Grgs1GSB&index=1&ab_channel=codebubb). However, the tutor uses a more complex syntax than what we are used to.
 
 ## Exercise 1
-Write a program to extract the first half of a string of even length.
+Write a program to extract the first half of a string of even length. Hint: use the `String.slice()` method.
 
 ## Exercise 2
 Write a program to concatenate two strings except their first character.
