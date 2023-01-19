@@ -16,7 +16,7 @@ Write a program to create a new string from a given string taking the first 3 ch
 Given two values, write a program to find out which one is nearest to 100.
 
 ## Exercise 5
-Write a program to check two numbers and return true if one of the numbers is 100 or if the sum of the numbers is 100.
+Write a program to check two numbers and print 'YEY' if one of the numbers is 100 or if the sum of the numbers is 100.
 
 ## Exercise 6
 Write a program to find the longest string from a given array of strings.
